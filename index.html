@@ -1,59 +1,52 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>trino presentations</title>
+<title>trino presentations</title>
 
-		<link rel="stylesheet" href="./reveal/dist/reset.css">
-		<link rel="stylesheet" href="./reveal/dist/reveal.css">
-    <link rel="stylesheet" href="./reveal/dist/theme/white.css" id="theme">
-    <link rel="stylesheet" href="./css/trino.css"/>
+<link rel="stylesheet" href="./reveal/dist/reset.css">
+<link rel="stylesheet" href="./reveal/dist/reveal.css">
+<link rel="stylesheet" href="./reveal/dist/theme/white.css" id="theme">
+<link rel="stylesheet" href="./css/trino.css"/>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="./reveal/plugin/highlight/monokai.css" id="highlight-theme">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
+<!-- Theme used for syntax highlighted code -->
+<link rel="stylesheet" href="./reveal/plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
 
-        <section
-          class="title-slide">
-          <h1>trino presentations</h1>
-          <img src="../images/trino-light.png">
-          <p>A collection of learning resources</p>
-          <br />
-          <p><small>Press ? for usage information</small></p>
-        </section>
+    <section class="title-slide">
+      <h1>trino presentations</h1>
+      <img src="../images/trino-light.png">
+      <p>A collection of learning resources</p>
+      <br />
+      <p><small>Press ? for usage information</small></p>
+    </section>
 
-        <section data-background="./images/trino-logo.png"
+    <section data-background="./images/trino-logo.png"
           data-background-size="250px"
           data-background-position="top 10px right 10px">
+      <h1>Presentations</h1>
+      <ul>
+        <li><a href="./introduction/index.html">Introduction to Trino</a></li>
+      </ul>
+    </section>
 
-          <h1>Presentations</h1>
-          <ul>
-          <li><a href="./introduction/index.html">Introduction to Trino</a></li>
-          </ul>
-        </section>
+  </div>
+</div>
 
-			</div>
-		</div>
-
-		<script src="./reveal/dist/reveal.js"></script>
-		<script src="./reveal/plugin/notes/notes.js"></script>
-		<script src="./reveal/plugin/markdown/markdown.js"></script>
-		<script src="./reveal/plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+<script src="./reveal/dist/reveal.js"></script>
+<script src="./reveal/plugin/notes/notes.js"></script>
+<script src="./reveal/plugin/markdown/markdown.js"></script>
+<script src="./reveal/plugin/highlight/highlight.js"></script>
+<script>
+  Reveal.initialize({
+   hash: true,
+  plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+  });
+</script>
+</body>
 </html>
