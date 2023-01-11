@@ -6,7 +6,7 @@
    fill="none"
    version="1.1"
    id="svg292"
-   sodipodi:docname="space-background2.svg"
+   sodipodi:docname="space-background-faded.svg"
    inkscape:version="1.2.2 (b0a8486, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -23,18 +23,19 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="0.30776829"
-     inkscape:cx="1726.9486"
+     inkscape:cx="1314.3004"
      inkscape:cy="705.07589"
      inkscape:window-width="1920"
-     inkscape:window-height="1080"
+     inkscape:window-height="1052"
      inkscape:window-x="1080"
-     inkscape:window-y="253"
+     inkscape:window-y="281"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg292" />
   <g
      clip-path="url(#clip0_2_39)"
      id="g282"
-     transform="matrix(1.936376,0,0,1.936376,-376.90693,6.4983953)">
+     transform="matrix(1.936376,0,0,1.936376,-376.90693,6.4983953)"
+     style="opacity:0.17286652">
     <path
        d="M 1475,0 H 0 v 463 h 1475 z"
        fill="#000033"
