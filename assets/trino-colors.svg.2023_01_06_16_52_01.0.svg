@@ -23,14 +23,14 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="1.0993631"
-     inkscape:cx="-39.568365"
-     inkscape:cy="317.91134"
+     inkscape:cx="75.953065"
+     inkscape:cy="317.45652"
      inkscape:window-width="1920"
-     inkscape:window-height="1027"
+     inkscape:window-height="1052"
      inkscape:window-x="1080"
-     inkscape:window-y="278"
+     inkscape:window-y="281"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g31035" />
+     inkscape:current-layer="svg28576" />
   <defs
      id="defs28574">
     <clipPath
@@ -246,17 +246,7 @@
   <g
      id="g31035"
      inkscape:label="trino-color-scheme"
-     transform="matrix(0.99980126,0,0,1,4.7368425,-18.758156)">
-    <rect
-       x="0"
-       y="0"
-       width="380"
-       height="672.62201"
-       fill="#9e9e9e"
-       id="rect28443-9-7"
-       inkscape:label="background"
-       style="fill:#ffffff;fill-opacity:1;stroke-width:2.84043"
-       transform="matrix(1.0001988,0,0,1,-4.737784,18.758156)" />
+     transform="matrix(0.99980126,0,0,1,-5.2631575,-28.758156)">
     <g
        clip-path="url(#clip2_406_142-4)"
        id="g28455"
@@ -273,26 +263,26 @@
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:22.2376px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.821913"
-         x="61.525845"
-         y="919.9696"
+         x="59.864151"
+         y="926.03595"
          id="text28864-0-5-3-1-2"
          inkscape:label="grey-label"
-         transform="scale(1.0052023,0.99482462)"><tspan
+         transform="scale(1.0052023,0.9948246)"><tspan
            sodipodi:role="line"
            id="tspan28862-9-5-1-4-1"
-           x="61.525845"
-           y="919.9696"
-           style="font-size:22.2376px;fill:#ffffff;stroke-width:0.821913">(6) #9E9E9E</tspan><tspan
+           x="59.864151"
+           y="926.03595"
+           style="font-size:22.2376px;fill:#ffffff;stroke-width:0.821913">(6)</tspan><tspan
            sodipodi:role="line"
-           x="61.525845"
-           y="947.7666"
+           x="59.864151"
+           y="953.83295"
            style="font-size:22.2376px;fill:#ffffff;stroke-width:0.821913"
            id="tspan28965-7-0-7-0-6" /><tspan
            sodipodi:role="line"
-           x="61.525845"
-           y="975.5636"
+           x="59.864151"
+           y="981.62994"
            style="font-size:22.2376px;fill:#ffffff;stroke-width:0.821913"
-           id="tspan28951-1-5-9-0-8">Grey</tspan></text>
+           id="tspan28951-1-5-9-0-8">Grey                          #9E9E9E</tspan></text>
     </g>
     <g
        id="g29174"
@@ -309,26 +299,26 @@
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:21.3626px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.789573"
-         x="61.727032"
-         y="835.85529"
+         x="58.561977"
+         y="843.86499"
          id="text28864-0-5-3-1"
          inkscape:label="yellow-label"
-         transform="scale(1.0051805,0.9948462)"><tspan
+         transform="scale(1.0051805,0.99484624)"><tspan
            sodipodi:role="line"
            id="tspan28862-9-5-1-4"
-           x="61.727032"
-           y="835.85529"
-           style="font-size:21.3626px;fill:#ffffff;stroke-width:0.789573">(5) #F8B600</tspan><tspan
+           x="58.561977"
+           y="843.86499"
+           style="font-size:21.3626px;fill:#ffffff;stroke-width:0.789573">(5)</tspan><tspan
            sodipodi:role="line"
-           x="61.727032"
-           y="862.55853"
+           x="58.561977"
+           y="870.56824"
            style="font-size:21.3626px;fill:#ffffff;stroke-width:0.789573"
            id="tspan28965-7-0-7-0" /><tspan
            sodipodi:role="line"
-           x="61.727032"
-           y="889.26178"
+           x="58.561977"
+           y="897.27148"
            style="font-size:21.3626px;fill:#ffffff;stroke-width:0.789573"
-           id="tspan28951-1-5-9-0">Yellow</tspan></text>
+           id="tspan28951-1-5-9-0">Yellow                          #F8B600</tspan></text>
     </g>
     <g
        clip-path="url(#clip5_406_142-7)"
@@ -346,26 +336,26 @@
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:21.4446px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.792604"
-         x="60.565536"
-         y="746.48401"
+         x="61.019234"
+         y="755.18103"
          id="text28864-0-5-3"
          inkscape:label="orange-label"
-         transform="scale(1.0052188,0.99480829)"><tspan
+         transform="scale(1.0052188,0.99480827)"><tspan
            sodipodi:role="line"
            id="tspan28862-9-5-1"
-           x="60.565536"
-           y="746.48401"
-           style="font-size:21.4446px;fill:#ffffff;stroke-width:0.792604">(4) #F88600</tspan><tspan
+           x="61.019234"
+           y="755.18103"
+           style="font-size:21.4446px;fill:#ffffff;stroke-width:0.792604">(4)</tspan><tspan
            sodipodi:role="line"
-           x="60.565536"
-           y="773.28973"
+           x="61.019234"
+           y="781.98676"
            style="font-size:21.4446px;fill:#ffffff;stroke-width:0.792604"
            id="tspan28965-7-0-7" /><tspan
            sodipodi:role="line"
-           x="60.565536"
-           y="800.09552"
+           x="61.019234"
+           y="808.79254"
            style="font-size:21.4446px;fill:#ffffff;stroke-width:0.792604"
-           id="tspan28951-1-5-9">Orange</tspan></text>
+           id="tspan28951-1-5-9">Orange                        #F88600</tspan></text>
     </g>
     <g
        clip-path="url(#clip7_406_142-4)"
@@ -383,25 +373,25 @@
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:21.3333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.788489"
-         x="60.206646"
-         y="654.60828"
+         x="60.823078"
+         y="667.34363"
          id="text28864-0-5"
          inkscape:label="pink-label"><tspan
            sodipodi:role="line"
            id="tspan28862-9-5"
-           x="60.206646"
-           y="654.60828"
-           style="font-size:21.3333px;fill:#ffffff;stroke-width:0.788489">(3) #DD00A1</tspan><tspan
+           x="60.823078"
+           y="667.34363"
+           style="font-size:21.3333px;fill:#ffffff;stroke-width:0.788489">(3)</tspan><tspan
            sodipodi:role="line"
-           x="60.206646"
-           y="681.2749"
+           x="60.823078"
+           y="694.01025"
            style="font-size:21.3333px;fill:#ffffff;stroke-width:0.788489"
            id="tspan28965-7-0" /><tspan
            sodipodi:role="line"
-           x="60.206646"
-           y="707.94153"
+           x="60.823078"
+           y="720.67688"
            style="font-size:21.3333px;fill:#ffffff;stroke-width:0.788489"
-           id="tspan28951-1-5">Pink</tspan></text>
+           id="tspan28951-1-5">Pink                            #DD00A1</tspan></text>
     </g>
     <g
        clip-path="url(#clip9_406_142-0)"
@@ -419,26 +409,26 @@
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:21.444px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.792581"
-         x="60.56739"
-         y="569.54907"
+         x="59.031422"
+         y="582.3501"
          id="text28864-0"
          inkscape:label="cobalt-blue-label"
-         transform="scale(1.0051895,0.9948373)"><tspan
+         transform="scale(1.0051895,0.99483731)"><tspan
            sodipodi:role="line"
            id="tspan28862-9"
-           x="60.56739"
-           y="569.54907"
-           style="font-size:21.444px;fill:#ffffff;stroke-width:0.792581">(2) #001C93</tspan><tspan
+           x="59.031422"
+           y="582.3501"
+           style="font-size:21.444px;fill:#ffffff;stroke-width:0.792581">(2)</tspan><tspan
            sodipodi:role="line"
-           x="60.56739"
-           y="596.35406"
+           x="59.031422"
+           y="609.15509"
            style="font-size:21.444px;fill:#ffffff;stroke-width:0.792581"
            id="tspan28965-7" /><tspan
            sodipodi:role="line"
-           x="60.56739"
-           y="623.15906"
+           x="59.031422"
+           y="635.96008"
            style="font-size:21.444px;fill:#ffffff;stroke-width:0.792581"
-           id="tspan28951-1">Cobalt Blue</tspan></text>
+           id="tspan28951-1">Cobalt Blue                  #001C93</tspan></text>
     </g>
     <g
        clip-path="url(#clip11_406_142-9)"
@@ -456,25 +446,25 @@
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:21.6776px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.801217"
-         x="61.185265"
-         y="479.87018"
+         x="61.917355"
+         y="491.47787"
          id="text28864-4"
          inkscape:label="dark-blue-label"><tspan
            sodipodi:role="line"
            id="tspan28862-7"
-           x="61.185265"
-           y="479.87018"
-           style="font-size:21.6776px;fill:#ffffff;stroke-width:0.801217">(1) #000033</tspan><tspan
+           x="61.917355"
+           y="491.47787"
+           style="font-size:21.6776px;fill:#ffffff;stroke-width:0.801217">(1)</tspan><tspan
            sodipodi:role="line"
-           x="61.185265"
-           y="506.96719"
+           x="61.917355"
+           y="518.57489"
            style="font-size:21.6776px;fill:#ffffff;stroke-width:0.801217"
            id="tspan28965-9" /><tspan
            sodipodi:role="line"
-           x="61.185265"
-           y="534.06421"
+           x="61.917355"
+           y="545.67188"
            style="font-size:21.6776px;fill:#ffffff;stroke-width:0.801217"
-           id="tspan28951-6">Dark Blue</tspan></text>
+           id="tspan28951-6">Dark Blue                    #000033</tspan></text>
     </g>
     <g
        clip-path="url(#clip2_406_142-4-4)"
@@ -493,26 +483,26 @@
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:22.2964px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.824088"
-         x="60.638329"
-         y="922.40369"
+         x="60.231236"
+         y="932.63416"
          id="text28864-0-5-3-1-2-4"
          inkscape:label="black-label"
-         transform="scale(1.0078621,0.99219924)"><tspan
+         transform="scale(1.0078621,0.99219925)"><tspan
            sodipodi:role="line"
            id="tspan28862-9-5-1-4-1-7"
-           x="60.638329"
-           y="922.40369"
-           style="font-size:22.2964px;fill:#ffffff;stroke-width:0.824088">(0) #212121</tspan><tspan
+           x="60.231236"
+           y="932.63416"
+           style="font-size:22.2964px;fill:#ffffff;stroke-width:0.824088">(0)</tspan><tspan
            sodipodi:role="line"
-           x="60.638329"
-           y="950.27417"
+           x="60.231236"
+           y="960.50464"
            style="font-size:22.2964px;fill:#ffffff;stroke-width:0.824088"
            id="tspan28965-7-0-7-0-6-3" /><tspan
            sodipodi:role="line"
-           x="60.638329"
-           y="978.14471"
+           x="60.231236"
+           y="988.37518"
            style="font-size:22.2964px;fill:#ffffff;stroke-width:0.824088"
-           id="tspan28951-1-5-9-0-8-0">Black </tspan></text>
+           id="tspan28951-1-5-9-0-8-0">Black                         #212121</tspan></text>
     </g>
     <text
        xml:space="preserve"
@@ -527,4 +517,13 @@
          sodipodi:role="line"
          style="stroke-width:0.93408">Color Scheme</tspan></text>
   </g>
+  <rect
+     x="0"
+     y="0"
+     width="359.92847"
+     height="88"
+     fill="#9e9e9e"
+     id="rect28443-9-5"
+     inkscape:label="black-rect"
+     style="fill:#212121;fill-opacity:1;stroke-width:0.999901" />
 </svg>
