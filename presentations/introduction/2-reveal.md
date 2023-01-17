@@ -87,7 +87,7 @@ The above markdown would create four slides in the following orientation.
 <!-- .element: class="fragment" data-fragment-index="0" -->
 
 <style>
-.tb table, .tb tr {
+.tb table, .tb tr, .tb th, .tb td {
   border: 1px solid;
 }
 </style>
