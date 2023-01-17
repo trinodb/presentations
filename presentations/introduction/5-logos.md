@@ -2,7 +2,7 @@
 
 Here is the following logos. Trino has a cute bunny mascot named Commander Bun Bun.
 
-![](../../assets/logos/cbb-isolated.svg) <!-- .element width="75%" -->
+![](./assets/logos/cbb-isolated.svg) <!-- .element width="75%" -->
 
 <!-- .element: style="background-color:#000033aa;" -->
 

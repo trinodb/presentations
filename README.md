@@ -1,5 +1,8 @@
 # Trino presentations
 
+> **Note**
+> These presentations are in draft mode. Please check back when they are ready for full use!
+
 A collection of learning resources about Trino.
 
 ## Presenting

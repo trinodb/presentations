@@ -8,26 +8,17 @@
 
 ## Why use this repository?
 
-<!-- .element: class="fragment" data-fragment-index="0" -->
- 
 To get the word out about Trino, simplicity and consistency are &#x1f511;.
-
-<!-- .element: class="fragment" data-fragment-index="0" -->
 
 Users will be looking at many diagrams that describe Trino. Having to reinterpret 
 each new diagram because of a novel presentation is fatiguing and not fun.
 
-<!-- .element: class="fragment" data-fragment-index="0" -->
-
 Sticking with a consistent style and visual language allows users to use what 
 they already know faster, and with less effort.
 
-<!-- .element: class="fragment" data-fragment-index="0" -->
+-vertical
 
 # Goals &#x2672;
-<!-- .element: class="fragment" data-fragment-index="1" -->
-
-<!-- .element: class="fragment" data-fragment-index="1" -->
 
 * Reduce user fatigue and effort
 * Reuse boilerplate components
