@@ -15,13 +15,14 @@
 
 ## Open source
 
-Trino is an *open source* project licensed under the Apache License, version 2.0. Note: this does not make Trino an Apache project.
-<!-- .element class="r-fit-text" -->
-
-![](images/open-source.png) <!-- .element width="250vw" style="background-color:#ffffff88" -->
-
-Trino is a community-driven project that believes people make up and own open source communities, not companies.
-<!-- .element class="r-fit-text" -->
+<div style="float: left; width: 60%;" class="r-fit-text">
+    Trino is an <b>open source</b> project licensed under the Apache License, version 2.0. Note: this does not make Trino an Apache project.
+    <br><br>
+    Trino is a community-driven project that believes people make up and own open source communities, not companies.
+</div>
+<div style="float: right; width: 40%;">
+    <img src="images/open-source.png" height="220" style="background-color:#ffffff75">
+</div>
 
 -vertical
 
