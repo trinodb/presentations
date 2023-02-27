@@ -15,49 +15,52 @@
 
 ## Open source
 
-<div style="float: left; width: 60%;" class="r-fit-text">
-    Trino is an <b>open source</b> project licensed under the Apache License, version 2.0. Note: this does not make Trino an Apache project.
-    <br><br>
-    Trino is a community-driven project that believes people make up and own open source communities, not companies.
+<div style="float: left; width: 60%; text-align: left; font-size:24px;">
+  <ul>
+    <li>Trino is an <b>open source</b> project licensed under the Apache License, version 2.0</li>
+    <li><b>Note:</b> This does not make Trino an Apache project</li>
+    <li>Trino is free to run, view the source, redistribute, and modify in any way you see fit</li>
+  </ul>
 </div>
-<div style="float: right; width: 40%;">
-    <img src="images/open-source.png" height="220" style="background-color:#ffffff75">
-</div>
+
+![](images/open-source.png) <!-- .element height="220" style="background-color:#ffffff75" -->
+
+<!-- .element style="float: left; width: 40%;" -->
 
 -vertical
 
 ## Structured Query Language (SQL)
 
-* Declaritive Langauge
-* De facto standard for accessing data stored in databases
+<div style="float: left; width: 60%; text-align: left; font-size:24px;" class="r-fit-text">
+  <ul>
+    <li>Declarative language - specify what, not how</li>
+    <li>Using SQL enables Trino to do the heavy lift of optimizing the code so you don't have to</li>
+  </ul>
+</div>
 
-<!-- .element class="r-fit-text" -->
+![](images/SQL.svg) <!-- .element height="220" style="background-color:#ffffff75" -->
 
-```SQL
-SELECT nationkey, COUNT(*) AS count
-FROM tpch.tiny.customer
-WHERE mktsegment = 'AUTOMOBILE'
-GROUP BY nationkey;
-```
-
-Trino closely follows the ANSI SQL standard around OLAP-related features, but more recently 
-new additions support more SQL features that enable write functionality expected in
-databases and data warehouses.
-
-<!-- .element class="r-fit-text" -->
+<!-- .element style="float: left; width: 40%;" -->
 
 -vertical
 
 ## Query Engine
 
- - Trino is not a database
- - Databases include query engines, but also support all the components around storage, transactions, and other feautres.
+<div style="float: left; width: 60%; text-align: left; font-size:24px;" class="r-fit-text">
+  <ul>
+    <li>Trino is not a database</li>
+    <li>Databases include query engines, but also support all the components around storage, transactions, and other features</li>
+  </ul>
+</div>
 
-![](images/relational-database.svg) <!-- .element width="150vw" style="background-color:#ffffff00" -->
-&emsp; &emsp;
-![](images/trino-query-engine.svg) <!-- .element width="150vw" style="background-color:#ffffff00" -->
+<div class="r-stack">
+  <img class="fragment fade-out" data-fragment-index="0" src="images/relational-database.svg" width="200vw">
+  <img class="fragment" data-fragment-index="0" src="images/trino-query-engine.svg" width="200vw">
+</div>
 
-What’s the point of just a query engine? 
+<!-- .element style="float: left;  width: 40%;" -->
+
+What&#39;s the point of just a query engine? 
 
 -vertical
  
@@ -74,9 +77,16 @@ What’s the point of just a query engine?
 
 ## Disparate data sources
 
+
+**SPI (Service Provider Interface)** \
+\
+A translation layer from the SQL operations to the domain-specific language of various heterogeneous data sources.
+
+<!-- .element style="float: left; width: 60%; text-align: center; font-size: 32px" -->
+
 ![](images/data-sources.svg) <!-- .element width="150vw" style="background-color:#ffffff00" -->
 
- _SPI (Service Provider Interface)_ is a translator from the SQL operations to the domain-specific language of various heterogeneous data sources.
+<!-- .element style="float: left;  width: 40%;" -->
 
 -vertical
 
@@ -103,35 +113,57 @@ What’s the point of just a query engine?
 
 ## What is a large data set?
 
+<div style="float: left; width: 60%; text-align: left; font-size:36px;" >
+  <ul>
+    <li>Relative to the scale after the initial boom of Big Data</li>
+    <li>Gigabytes to petabytes of data</li>
+    <li>A variety of data formats</li>
+    <li>Able to be processed in minutes to nanoseconds</li>
+  </ul>
+</div>
+
 ![](images/large-data.svg) <!-- .element width="350vw" style="background-color:#ffffff00" -->
 
-* Relative to the scale after the initial boom of Big Data
-* Gigabytes to petabytes of data 
-* A variety of data formats
-* Able to be processed in minutes to nanoseconds
+<!-- .element style="float: left;  width: 40%;" -->
 
 Trino keeps up with all these requirements on top of the interactive speeds.
+
+<!-- .element class="r-fit-text" -->
 
 -vertical
 
 ## Distributed systems
 
+
+<div style="float: left; width: 60%; text-align: left; font-size:36px;" >
+  <ul>
+    <li>Processes big data in a scalable and cost-efficient manner</li>
+    <li>Trades off complexity for resiliency and scalability</li>
+    <li>The coordinator node is responsible for planning and scheduling all the queries</li>
+    <li>Query execution is distributed across multiple Trino worker nodes</li>
+  </ul>
+</div>
+
 ![](images/trino-distributed.svg) <!-- .element width="350vw" style="background-color:#ffffff00" -->
 
-* Processes big data in a scalable and cost-efficient manner
-* Trades off complexity for resiliency and scalability
-* The coordinator node is responsible for planning and scheduling all the queries
-* Query execution is distributed across multiple Trino worker nodes
+<!-- .element style="float: left;  width: 40%;" -->
 
 -vertical
 
 ## Massively parallel processing (MPP) architecture
 
-![](images/trino-mpp.svg) <!-- .element width="350vw" style="background-color:#ffffff00" -->
 
-* Splits work up across nodes and threads. 
-* Shares a single long-lived Java Virtual Machine (JVM) process on worker nodes.
-* Reduces response time, but requires integrated scheduling, resource management, and isolation.
+<div style="float: left; width: 60%; text-align: left; font-size:36px;" >
+  <ul>
+    <li>Splits work up across nodes and threads</li>
+    <li>Shares a single long-lived Java Virtual Machine (JVM) process on worker nodes</li>
+    <li>Reduces response time, but requires integrated scheduling, resource management, and isolation</li>
+  </ul>
+</div>
+
+![](images/trino-mpp.svg) <!-- .element width="250vw" style="background-color:#ffffff00" -->
+
+<!-- .element style="float: left;  width: 40%;" -->
 
 -vertical
 
