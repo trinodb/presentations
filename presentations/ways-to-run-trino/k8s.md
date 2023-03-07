@@ -1,4 +1,4 @@
-# Tarball
+# Kubernetes
 
 -vertical
-## Download
+## Requirements
