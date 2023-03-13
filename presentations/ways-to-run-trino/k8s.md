@@ -1,0 +1,4 @@
+# Kubernetes
+
+-vertical
+## Requirements
