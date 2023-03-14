@@ -54,7 +54,7 @@
 </div>
 
 <div class="r-stack">
-  <img class="fragment fade-out" data-fragment-index="0" src="images/relational-database.svg" width="200vw">
+  <img class="fragment fade-out" data-fragment-index="0" src="images/relational-database.svg" width="300vw">
   <img class="fragment" data-fragment-index="0" src="images/trino-query-engine.svg" width="200vw">
 </div>
 
@@ -78,9 +78,9 @@ What&#39;s the point of just a query engine?
 ## Disparate data sources
 
 
-**SPI (Service Provider Interface)** \
+**Connector-based architecture** \
 \
-A translation layer from the SQL operations to the domain-specific language of various heterogeneous data sources.
+A connector provides Trino an interface that acts as a translation layer from Trino SQL operations to the domain-specific language of various heterogeneous data sources.
 
 <!-- .element style="float: left; width: 60%; text-align: center; font-size: 32px" -->
 
@@ -134,7 +134,6 @@ Trino keeps up with all these requirements on top of the interactive speeds.
 
 ## Distributed systems
 
-
 <div style="float: left; width: 60%; text-align: left; font-size:36px;" >
   <ul>
     <li>Processes big data in a scalable and cost-efficient manner</li>
@@ -173,7 +172,7 @@ Trino keeps up with all these requirements on top of the interactive speeds.
       <span style="color:#dd00a1">distributed</span>,
       <span style="color:#f8b600">massively parallel processing</span>,
       <span style="color:#f88600">SQL</span>
-      <span style="color:#dd00a1">query engine</span>.
+      <span style="color:#dd00a1">query engine</span>
   designed to query 
       <span style="color:#f8b600">large data sets</span> from one or more
   <span style="color:#f88600">disparate data sources</span>.
