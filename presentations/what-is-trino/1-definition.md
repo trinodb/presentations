@@ -15,41 +15,35 @@
 
 ## Open source
 
-<div style="float: left; width: 60%; text-align: left; font-size:24px;">
-  <ul>
-    <li>Trino is an <b>open source</b> project licensed under the Apache License, version 2.0</li>
-    <li><b>Note:</b> This does not make Trino an Apache project</li>
-    <li>Trino is free to run, view the source, redistribute, and modify in any way you see fit</li>
-  </ul>
-</div>
-
-![](images/open-source.png) <!-- .element height="220" style="background-color:#ffffff75" -->
-
-<!-- .element style="float: left; width: 40%;" -->
+* Created and maintained by a community of contributors
+* Licensed under the [Apache license, version 2.0](https://wikipedia.org/wiki/Apache_License)
+* Free to run, view the source, redistribute, and modify in any way you see fit.
+* Friendly to commercial adoption and usage
+* Not a project of the [Apache Software Foundation](https://apache.org/)
 
 -vertical
 
 ## Structured Query Language (SQL)
 
-<div style="float: left; width: 60%; text-align: left; font-size:24px;" class="r-fit-text">
-  <ul>
-    <li>Declarative language - specify what, not how</li>
-    <li>Using SQL enables Trino to do the heavy lift of optimizing the code so you don't have to</li>
-  </ul>
-</div>
+* Declarative language - specify what, not how
+* Using SQL enables you to leave the heavy lift of optimizing the code to Trino</li>
 
-![](images/SQL.svg) <!-- .element height="220" style="background-color:#ffffff75" -->
-
-<!-- .element style="float: left; width: 40%;" -->
+```sql
+SELECT nationkey, count(*) AS count
+FROM tpch.tiny.customer
+WHERE mktsegment='AUTOMOBILE'
+GROUP BY nationkey;
+```
 
 -vertical
 
-## Query Engine
+## Query engine
 
 <div style="float: left; width: 60%; text-align: left; font-size:24px;" class="r-fit-text">
   <ul>
     <li>Trino is not a database</li>
-    <li>Databases include query engines, but also support all the components around storage, transactions, and other features</li>
+    <li>Databases include query engines</li>
+    <li>Databases also support all the components around storage, transactions, and other features</li>
   </ul>
 </div>
 
@@ -60,10 +54,10 @@
 
 <!-- .element style="float: left;  width: 40%;" -->
 
-What&#39;s the point of just a query engine? 
+> What's the point of just a query engine?
 
 -vertical
- 
+
 <h3>
   Trino is a ludicrously fast, open source, SQL query engine...
   <span class="fragment">
@@ -80,7 +74,9 @@ What&#39;s the point of just a query engine?
 
 **Connector-based architecture** \
 \
-A connector provides Trino an interface that acts as a translation layer from Trino SQL operations to the domain-specific language of various heterogeneous data sources.
+A connector provides Trino an interface that acts as a translation layer from
+Trino SQL operations to the domain-specific language of various heterogeneous
+data sources.
 
 <!-- .element style="float: left; width: 60%; text-align: center; font-size: 32px" -->
 
@@ -118,7 +114,7 @@ A connector provides Trino an interface that acts as a translation layer from Tr
     <li>Relative to the scale after the initial boom of Big Data</li>
     <li>Gigabytes to petabytes of data</li>
     <li>A variety of data formats</li>
-    <li>Able to be processed in minutes to nanoseconds</li>
+    <li>Capable to process data in minutes to nanoseconds</li>
   </ul>
 </div>
 
@@ -149,13 +145,14 @@ Trino keeps up with all these requirements on top of the interactive speeds.
 
 -vertical
 
-## Massively parallel processing (MPP) architecture
+## Massively parallel processing (MPP)
 
 
 <div style="float: left; width: 60%; text-align: left; font-size:36px;" >
   <ul>
-    <li>Splits work up across nodes and threads</li>
+    <li>Splits work up across worker nodes in a cluster of servers</li>
     <li>Shares a single long-lived Java Virtual Machine (JVM) process on worker nodes</li>
+    <li>Lots of parallel threads on each worker JVM</li>
     <li>Reduces response time, but requires integrated scheduling, resource management, and isolation</li>
   </ul>
 </div>
@@ -167,7 +164,7 @@ Trino keeps up with all these requirements on top of the interactive speeds.
 -vertical
 
 <h3>
-  Trino is a ludicrously fast, 
+  Trino is a ludicrously fast,
       <span style="color:#f88600">open source</span>,
       <span style="color:#dd00a1">distributed</span>,
       <span style="color:#f8b600">massively parallel processing</span>,
