@@ -20,8 +20,7 @@
 </head>
 <body>
 <div class="reveal">
-  <div id="qrcode" style="display:block;">
-  </div>
+  <div id="qrcode" style="display:block; background-color: #ffffff;"/>
   <div class="slides">
     <section
       data-transition="convex"
@@ -86,17 +85,19 @@
 <script src="../../reveal/plugin/highlight/highlight.js"></script>
 <script src="../../reveal/plugin/appearance/appearance.js"></script>
 <script>
+ var qrcode = new QRCode(document.getElementById("qrcode"), {
+  text: window.location.href,
+  width: 150,
+  height: 150,
+  colorDark : "#000000ff",
+  colorLight : "#ffffffff",
+  useSVG: true,
+  correctLevel : QRCode.CorrectLevel.L
+ });
+
  // More info about initialization & config:
  // - https://revealjs.com/initialization/
  // - https://revealjs.com/config/
- var qrcode = new QRCode(document.getElementById("qrcode"), {
-  text: window.location.href,
-  width: 100,
-  height: 100,
-  useSVG: true,
-  correctLevel : QRCode.CorrectLevel.H
- });
-
  Reveal.initialize({
    hash: true,
    parallaxBackgroundImage: '../../assets/logos/space-background-faded.svg',
@@ -106,8 +107,7 @@
  });
 
  Reveal.on( 'slidetransitionend', event => {
-  // event.previousSlide, event.currentSlide, event.indexh, event.indexv
-  qrcode.makeCode(window.location.href);
+  qrcode.makeCode(event.currentSlide.baseURI);
  } );
 </script>
 </body>
