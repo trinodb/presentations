@@ -2,12 +2,28 @@
 
 -vertical
 
-## Data sources, connectors, and catalogs
+## Data source
 
-* ***Data sources*** are anything from databases, REST APIs, files in object
-  storage or any filesystems, and any data that can be represented in a tabular
-  format
-* ***Connectors*** provides a table-based abstraction over the underlying data
-  source that is accessible through SQL
-* ***Catalogs*** is a SQL abstraction containing details a data source, exposes
-  its schemas, and configures a specific connector to use 
+* Any system Trino can query to retrieve data
+* Data must be representable in tabular format
+* Databases, files in object storage or any filesystems, document store, REST APIs, and more
+
+-vertical
+
+## Catalogs
+
+* Configuration to connect to a data source in Trino
+* Allows querying data source
+* Access in Trino by the name of the catalog
+* Catalogs contain one or more schemas
+* Configures a specific connector
+
+-vertical
+
+## Connector
+
+* Included in Trino as plugin
+* Translation layer between Trino and data source
+* Provides a table-based abstraction of the underlying data source
+
+ 

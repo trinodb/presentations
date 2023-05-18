@@ -3,12 +3,12 @@
   <span class="fragment">
     <span class="animate__flipInX animate__slower">
       <span style="color:#f88600">open source</span>,
-    </span> 
+    </span>
     <span class="animate__flipInX animate__slower" data-delay="1000" style="color:#dd00a1">SQL</span>
     <span class="animate__flipInX animate__slower" data-delay="1000">
       <span style="color:#f8b600">query engine</span>.
     </span>
-  </span> 
+  </span>
 </h3>
 
 -vertical
@@ -26,7 +26,8 @@
 ## Structured Query Language (SQL)
 
 * Declarative language - specify what, not how
-* Using SQL enables you to leave the heavy lift of optimizing the code to Trino</li>
+* Using SQL enables you focus on the business case
+* Trino optimizes query processing for you
 
 ```sql
 SELECT nationkey, count(*) AS count
@@ -71,7 +72,6 @@ GROUP BY nationkey;
 
 ## Disparate data sources
 
-
 **Connector-based architecture** \
 \
 A connector provides Trino an interface that acts as a translation layer from
@@ -87,7 +87,7 @@ data sources.
 -vertical
 
 <h3>
-  Trino is a ludicrously fast, open source, 
+  Trino is a ludicrously fast, open source,
   <span class="fragment">
     <span class="animate__flipInX animate__slower">
       <span style="color:#f88600">distributed</span>,
@@ -96,7 +96,7 @@ data sources.
       <span style="color:#dd00a1">massively parallel processing</span>,
     </span>
   </span>
-  SQL query engine designed to query 
+  SQL query engine designed to query
   <span class="fragment">
     <span class="animate__flipInX animate__slower">
       <span style="color:#f8b600">large data sets</span> from one or more
@@ -111,8 +111,8 @@ data sources.
 
 <div style="float: left; width: 60%; text-align: left; font-size:36px;" >
   <ul>
-    <li>Relative to the scale after the initial boom of Big Data</li>
-    <li>Gigabytes to petabytes of data</li>
+    <li>Beyond the scale after the Big Data trend</li>
+    <li>Onwards from gigabytes to terabytes and petabytes of data</li>
     <li>A variety of data formats</li>
     <li>Capable to process data in minutes to nanoseconds</li>
   </ul>
@@ -122,7 +122,7 @@ data sources.
 
 <!-- .element style="float: left;  width: 40%;" -->
 
-Trino keeps up with all these requirements on top of the interactive speeds.
+Trino enables interactive queries with large scale data.
 
 <!-- .element class="r-fit-text" -->
 
@@ -134,7 +134,8 @@ Trino keeps up with all these requirements on top of the interactive speeds.
   <ul>
     <li>Processes big data in a scalable and cost-efficient manner</li>
     <li>Trades off complexity for resiliency and scalability</li>
-    <li>The coordinator node is responsible for planning and scheduling all the queries</li>
+    <li>Parallel processing in a cluster of nodes<li>
+    <li>Coordinator node is responsible for planning and scheduling all the queries</li>
     <li>Query execution is distributed across multiple Trino worker nodes</li>
   </ul>
 </div>
@@ -151,7 +152,7 @@ Trino keeps up with all these requirements on top of the interactive speeds.
 <div style="float: left; width: 60%; text-align: left; font-size:36px;" >
   <ul>
     <li>Splits work up across worker nodes in a cluster of servers</li>
-    <li>Shares a single long-lived Java Virtual Machine (JVM) process on worker nodes</li>
+    <li>Uses long-lived Java Virtual Machine (JVM) process on each node</li>
     <li>Lots of parallel threads on each worker JVM</li>
     <li>Reduces response time, but requires integrated scheduling, resource management, and isolation</li>
   </ul>
