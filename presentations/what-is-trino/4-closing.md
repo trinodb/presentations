@@ -13,5 +13,5 @@
 
 ![](../../assets/logos/horizontal/svg/trino-logo-fullColor-ltbg.svg) <!-- .element height="120" -->
 
-#### Happy querying, let's dive in!
+> Happy querying, [let's dive in](../../index.html#/0/1)!
 
