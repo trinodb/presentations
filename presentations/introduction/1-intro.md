@@ -10,10 +10,10 @@
 
 To get the word out about Trino, simplicity and consistency are &#x1f511;.
 
-Users will be looking at many diagrams that describe Trino. Having to reinterpret 
+Users will be looking at many diagrams that describe Trino. Having to reinterpret
 each new diagram because of a novel presentation is fatiguing and not fun.
 
-Sticking with a consistent style and visual language allows users to use what 
+Sticking with a consistent style and visual language allows users to use what
 they already know faster, and with less effort.
 
 -vertical
@@ -37,7 +37,7 @@ technical presentation faster around Trino.
 
 ## What is in this repository?
 
-- [Presentations](https://github.com/trinodb/presentations) 
+- [Presentations](https://github.com/trinodb/presentations)
 - [Fonts](https://github.com/trinodb/presentations/tree/main/assets/fonts)
 - [Icons](https://github.com/trinodb/presentations/tree/main/assets/icons)
 - [Logos](https://github.com/trinodb/presentations/tree/main/assets/logos)
