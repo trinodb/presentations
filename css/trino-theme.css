@@ -1,5 +1,5 @@
 /**
- * Trino theme for reveal.js. 
+ * Trino theme for reveal.js.
  *
  * By Brian Olsen, http://bitondata.dev
  */
@@ -184,15 +184,17 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   margin-left: 40px;
 }
 
+
 .reveal blockquote {
   display: block;
   position: relative;
-  width: 70%;
+  width: 80%;
   margin: var(--r-block-margin) auto;
-  padding: 5px;
+  padding: 7px;
   font-style: italic;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  background: #000077;
+  box-shadow: 0px 0px 2px rgb(164, 164, 164);
+  border-radius: 10px;
 }
 
 .reveal blockquote p:first-child,
