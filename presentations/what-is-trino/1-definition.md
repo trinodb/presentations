@@ -1,14 +1,9 @@
 <h3>
   Trino is a ludicrously fast,
-  <span class="fragment">
-    <span class="animate__flipInX animate__slower">
-      <span style="color:#f88600">open source</span>,
+    <span class="animate__flipInX" data-delay="500" style="color:#f88600">open source,</span>
+    <span class="animate__flipInX" data-delay="500" style="color:#dd00a1">SQL</span>
+    <span class="animate__flipInX" data-delay="500" style="color:#f8b600">query engine.
     </span>
-    <span class="animate__flipInX animate__slower" data-delay="1000" style="color:#dd00a1">SQL</span>
-    <span class="animate__flipInX animate__slower" data-delay="1000">
-      <span style="color:#f8b600">query engine</span>.
-    </span>
-  </span>
 </h3>
 
 -vertical
@@ -50,18 +45,16 @@ GROUP BY nationkey;
 </div>
 
 <div class="r-stack">
-  <img class="fragment fade-out" data-fragment-index="0" src="images/relational-database.svg" width="300vw">
+  <img class="fragment fade-out" data-fragment-index="0" src="images/relational-database.svg" width="500vw">
   <img class="fragment" data-fragment-index="0" src="images/trino-query-engine.svg" width="200vw">
 </div>
 
 -vertical
 
 <h3>
-  Trino is a ludicrously fast, open source, SQL query engine...
-  <span class="fragment">
-    <span class="animate__flipInX animate__slower">
-      designed to query <span style="color:#dd00a1">disparate data sources</span>.
-    </span>
+  Trino is a ludicrously fast, open source, SQL query engine
+  <span class="animate__flipInX">
+    designed to query <span style="color:#dd00a1">disparate data sources</span>.
   </span>
 </h3>
 
@@ -84,22 +77,14 @@ data sources.
 -vertical
 
 <h3>
-  Trino is a ludicrously fast, open source,
-  <span class="fragment">
-    <span class="animate__flipInX animate__slower">
-      <span style="color:#f88600">distributed</span>,
-    </span>
-    <span class="animate__flipInX animate__slower">
-      <span style="color:#dd00a1">massively parallel processing</span>,
-    </span>
-  </span>
-  SQL query engine designed to query
-  <span class="fragment">
-    <span class="animate__flipInX animate__slower">
-      <span style="color:#f8b600">large data sets</span> from one or more
-    </span>
-  </span>
-  disparate data sources.
+  Trino is a ludicrously fast,
+  <span  class="animate__flipInX" data-delay="500">open source, </span>
+  <span class="animate__flipInX" data-delay="500" style="color:#f88600">distributed, </span>
+  <span class="animate__flipInX" data-delay="500" style="color:#dd00a1">massively parallel processing, </span>
+  <span class="animate__flipInX" data-delay="500">SQL query engine </span>
+  <span class="animate__flipInX" data-delay="500">designed to query</span>
+  <span class="animate__flipInX" data-delay="500" style="color:#f8b600">large data sets </span>
+  <span class="animate__flipInX" data-delay="500">from one or more disparate data sources. </span>
 </h3>
 
 -vertical
@@ -163,12 +148,13 @@ Trino enables interactive queries with large scale data.
 
 <h3>
   Trino is a ludicrously fast,
-      <span style="color:#f88600">open source</span>,
-      <span style="color:#dd00a1">distributed</span>,
-      <span style="color:#f8b600">massively parallel processing</span>,
-      <span style="color:#f88600">SQL</span>
-      <span style="color:#dd00a1">query engine</span>
-  designed to query 
-      <span style="color:#f8b600">large data sets</span> from one or more
-  <span style="color:#f88600">disparate data sources</span>.
+  <span style="color:#f88600" class="animate__flipInX" data-delay="500">open source,</span>
+  <span style="color:#dd00a1" class="animate__flipInX" data-delay="500">distributed,</span>
+  <span style="color:#f8b600" class="animate__flipInX" data-delay="500">massively parallel processing,</span>
+  <span style="color:#f88600" class="animate__flipInX" data-delay="500">SQL</span>
+  <span style="color:#dd00a1" class="animate__flipInX" data-delay="500">query engine</span>
+  <span class="animate__flipInX" data-delay="500">designed to query</span>
+  <span style="color:#f8b600" class="animate__flipInX" data-delay="500">large data sets</span>
+  <span class="animate__flipInX" data-delay="500">from one or more</span>
+  <span style="color:#f88600" class="animate__flipInX" data-delay="500" >disparate data sources.</span>
 </h3>
