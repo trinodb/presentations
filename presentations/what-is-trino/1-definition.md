@@ -46,16 +46,13 @@ GROUP BY nationkey;
     <li>Databases include query engines</li>
     <li>Databases also support all the components around storage, transactions, and other features</li>
   </ul>
+  <blockquote><p>What's the point of just a query engine?</p></blockquote>
 </div>
 
 <div class="r-stack">
   <img class="fragment fade-out" data-fragment-index="0" src="images/relational-database.svg" width="300vw">
   <img class="fragment" data-fragment-index="0" src="images/trino-query-engine.svg" width="200vw">
 </div>
-
-<!-- .element style="float: left;  width: 40%;" -->
-
-> What's the point of just a query engine?
 
 -vertical
 
