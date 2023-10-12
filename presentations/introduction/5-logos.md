@@ -2,7 +2,7 @@
 
 Here is the following logos. Trino has a cute bunny mascot named Commander Bun Bun.
 
-![](./assets/logos/cbb-isolated.svg) <!-- .element width="75%" -->
+![](../../assets/logos/cbb-isolated.svg) <!-- .element width="75%" -->
 
 <!-- .element: style="background-color:#000033aa;" -->
 
@@ -11,7 +11,7 @@ Here is the following logos. Trino has a cute bunny mascot named Commander Bun B
 ## Trino logos usage
 
 * Use a permitted Trino logo to link to Trino.
-* Use the icons to denote Trino in architecture diagrams. 
+* Use the icons to denote Trino in architecture diagrams.
 * Use a permitted Trino logo to inform others that you use Trino.
 * Use the Trino logo in a slide to discuss and promote awareness to Trino.
 * Use the Trino logo in a blog post or news article about Trino.

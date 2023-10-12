@@ -10,11 +10,10 @@
 </style>
 
 ## Reveal.js background
- 
 
 Trino presentations are built on [reveal.js](https://revealjs.com/), an HTML presentation framework.
 
-The [markdown plugin](https://revealjs.com/markdown/#markdown-plugin) is used to represent most slide 
+The [markdown plugin](https://revealjs.com/markdown/#markdown-plugin) is used to represent most slide
 content in modular external markdown files.
 
 The following slides contain some brief intro to reveal.js using markdown
@@ -31,8 +30,8 @@ The following slides contain some brief intro to reveal.js using markdown
 <script>
  Reveal.initialize({
    hash: true,
-   parallaxBackgroundImage: '../assets/logos/space-background-faded.svg',
-   parallaxBackgroundSize: '2853px 1000px', 
+   parallaxBackgroundImage: '../../assets/logos/space-background-faded.svg',
+   parallaxBackgroundSize: '2853px 1000px',
    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
  });
 ```
@@ -102,7 +101,7 @@ The above markdown would create four slides in the following orientation.
 
 ## Using Markdown: Headings
 
-```markdown 
+```markdown
 ## Using Markdown: Headings
 
 # H1
@@ -125,7 +124,7 @@ The above markdown would create four slides in the following orientation.
 
 ## Using Markdown: Formatting
 
-```markdown 
+```markdown
 ## Using Markdown: Formatting
 
 _Just some italics_
@@ -159,14 +158,14 @@ _Just some italics_ <!-- .element: class="fragment fade-in" data-fragment-index=
 
 ## Using Markdown: Lists
 
-```markdown 
+```markdown
 ## Using Markdown: Lists
 
 * one
 * two
   1. two.one
   1. two.two
-* three 
+* three
 ```
 
 <!-- .element: class="fragment" data-fragment-index="0" -->
@@ -175,7 +174,7 @@ _Just some italics_ <!-- .element: class="fragment fade-in" data-fragment-index=
 * two
   1. two.one
   1. two.two
-* three 
+* three
 
 <!-- .element: class="fragment fade-in" data-fragment-index="1" -->
 
@@ -183,7 +182,7 @@ _Just some italics_ <!-- .element: class="fragment fade-in" data-fragment-index=
 
 ## Using Markdown: Code
 
-```markdown 
+```markdown
 ## Using Markdown: Code
 
 ```sql[1,3|2]
@@ -215,7 +214,7 @@ Links to [external sites](https://github.com/trinodb/presentations)
 
 <!-- .element: class="fragment" data-fragment-index="2" -->
 
-Links to [other slides](#/0) 
+Links to [other slides](#/0)
 
 <!-- .element: class="fragment" data-fragment-index="1" -->
 ```
@@ -226,7 +225,7 @@ Links to [external sites](https://github.com/trinodb/presentations)
 
 <!-- .element: class="fragment" data-fragment-index="2" -->
 
-Links to [other slides](#/0) 
+Links to [other slides](#/0)
 
 <!-- .element: class="fragment" data-fragment-index="1" -->
 
