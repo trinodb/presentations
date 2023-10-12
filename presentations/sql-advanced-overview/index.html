@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="../../css/trino.css"/>
 <link rel="stylesheet" href="../../css/colors.css">
 <script src="../../reveal/plugin/highlight/highlight.js"></script>
-<script src="../../js/qrcode.js"></script>
 
 <script>
   document.write('<link rel="stylesheet" href="../../reveal/css/print/'
@@ -97,23 +96,13 @@
 <script src="../../reveal/plugin/highlight/highlight.js"></script>
 <script src="../../reveal/plugin/appearance/appearance.js"></script>
 <script>
- var qrcode = new QRCode(document.getElementById("qrcode"), {
-  text: window.location.href,
-  width: 150,
-  height: 150,
-  colorDark : "#000000ff",
-  colorLight : "#ffffffff",
-  useSVG: true,
-  correctLevel : QRCode.CorrectLevel.L
- });
-
  // More info about initialization & config:
  // - https://revealjs.com/initialization/
  // - https://revealjs.com/config/
  Reveal.initialize({
    hash: true,
    parallaxBackgroundImage: '../../assets/logos/space-background-faded.svg',
-   parallaxBackgroundSize: '2853px 1000px', 
+   parallaxBackgroundSize: '2853px 1000px',
    // Learn about plugins: https://revealjs.com/plugins/
    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, Appearance]
  });
