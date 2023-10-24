@@ -60,7 +60,8 @@ VALUES 'Today: ' || CAST(current_date AS VARCHAR),
 SELECT * FROM (
   VALUES ('Today', CAST(current_date AS VARCHAR)),
          ('Tomorrow', date_format(date_add('day', 1, current_timestamp), '%Y-%m-%d'))
-) as t(Description, Date);
+) as t(description, the_date)
+ORDER BY the_date DESC;
 
 VALUES format('pi = %.5f', pi()),
        format('agent %03d', 7),
