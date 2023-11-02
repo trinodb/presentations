@@ -1,1 +1,1 @@
-queries to be added
+SHOW CATALOGS;

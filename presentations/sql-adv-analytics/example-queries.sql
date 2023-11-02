@@ -34,7 +34,9 @@ SELECT localtime;
 
 SELECT localtimestamp;
 
-SELECT date_format(now(), 'day %d in %M of the year %Y, %H th hour');
+SELECT date_format(now(), 'day %d in %M of the year %Y, %H th hour'); -- MySQL
+
+SELECT format_datetime(now(),'y-M-dd'); -- Java
 
 SELECT human_readable_seconds(37462);
 
