@@ -21,7 +21,7 @@
 
 Approach `MATCH_RECOGNIZE` in four steps:
 
-1. Define paritioning and ordering rules <!--helps define the window where the pattern is examined-->
+1. Define partitioning and ordering rules <!--helps define the window where the pattern is examined-->
 1. Define patterns using regular expressions and variables <!--What pattern am I looking for and how-->
 1. Define measure and compute during match <!--What information am I looking to get out of that pattern and what calculations do I do-->
 1. Define the shape output <!--How much information do I want back-->
@@ -68,7 +68,7 @@ MEASURES
   START.orderdate AS start_date,
   LAST(UP.orderdate) AS final_date
 ```
- 
+
 -vertical
 
 ## MATCH_RECOGNIZE
@@ -89,7 +89,7 @@ AFTER MATCH SKIP PAST LAST ROW
 ### All together now
 
 ```sql
-SELECT 
+SELECT
   custkey,
   start_price,
   bottom_price,

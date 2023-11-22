@@ -1,19 +1,24 @@
-## Window functions and pattern matching
+# Window functions
+
+### Analyzing multiple rows of the result, including pattern matching.  <!-- .element style="color:#f88600;" -->
 
 -vertical
-## Window function overview
+##  Window functions overview
 
-Window functions run across rows of the result. Processing order:
+Window functions run across rows of the result. Later in the query processing
+order:
 
-1. `FROM` and `JOIN`s
-2. `WHERE`
-3. `GROUP BY`
-4. `HAVING`
+```java
+  1. FROM and JOINs
+  2. WHERE
+  3. GROUP BY
+  4. HAVING
 5. Window functions
-6. `SELECT`
-7. `DISTINCT`
-8. `ORDER BY`
-9. `LIMIT`
+  6. SELECT
+  7. DISTINCT
+  8. ORDER BY
+  9. LIMIT
+```
 
 -vertical
 ## Row numbering
@@ -23,7 +28,7 @@ Assign each region a unique number, in name order:
 ```sql
 SELECT name,
        row_number() OVER (ORDER BY name) AS id
-FROM region
+FROM tpch.tiny.region
 ORDER BY name;
 ```
 
@@ -45,7 +50,7 @@ Assign each region a unique number, in descending name order:
 ```sql
 SELECT name,
        row_number() OVER (ORDER BY name DESC) AS id
-FROM region
+FROM tpch.tiny.region
 ORDER BY name;
 ```
 
@@ -67,7 +72,7 @@ Assign each region a number, in descending name order, limited to three rows:
 ```sql
 SELECT name,
        row_number() OVER (ORDER BY name DESC) AS row_number
-FROM region
+FROM tpch.tiny.region
 ORDER BY name
 LIMIT 3;
 ```
@@ -88,7 +93,7 @@ Assign a rank to each region, in descending name order:
 ```sql
 SELECT name,
        rank() OVER (ORDER BY name DESC) AS rank
-FROM region
+FROM tpch.tiny.region
 ORDER BY name;
 ```
 
@@ -109,7 +114,7 @@ Assign a rank to each region, based on first letter of name:
 ```sql
 SELECT name,
        rank() OVER (ORDER BY substr(name, 1, 1)) AS rank
-FROM region
+FROM tpch.tiny.region
 ORDER BY name;
 ```
 
@@ -131,7 +136,7 @@ Assign a rank to each region, based on first letter of name:
 ```sql
 SELECT name,
        dense_rank() OVER (ORDER BY substr(name, 1, 1)) AS rank
-FROM region
+FROM tpch.tiny.region
 ORDER BY name;
 ```
 
@@ -154,7 +159,7 @@ Assign a rank to each region:
 SELECT name,
        rank() OVER (ORDER BY null) AS x,
        rank() OVER () AS y
-FROM region
+FROM tpch.tiny.region
 ORDER BY name;
 ```
 
@@ -177,7 +182,7 @@ Assign a rank to each region:
 SELECT name,
        row_number() OVER (ORDER BY null) AS x,
        row_number() OVER () AS y
-FROM region
+FROM tpch.tiny.region
 ORDER BY name;
 ```
 
@@ -199,7 +204,7 @@ Assign rows into three buckets, in name order:
 ```sql
 SELECT name,
        ntile(3) OVER (ORDER BY name) AS bucket
-FROM region
+FROM tpch.tiny.region
 ORDER BY name;
 ```
 
@@ -221,7 +226,7 @@ Percentage rank of rows, in name order:
 ```sql
 SELECT name,
        percent_rank() OVER (ORDER BY name) AS percent
-FROM region
+FROM tpch.tiny.region
 ORDER BY name;
 ```
 
@@ -243,7 +248,7 @@ Divide regions by first letter of name, then assign ranks:
 ```sql
 SELECT name,
        rank() OVER (PARTITION BY substr(name, 1, 1) ORDER BY name) AS rank
-FROM region
+FROM tpch.tiny.region
 ORDER BY name;
 ```
 
@@ -266,7 +271,7 @@ Assign a rank to each region:
 SELECT name,
        rank() OVER (PARTITION BY null ORDER BY name) AS x,
        rank() OVER (ORDER BY name) AS y
-FROM region
+FROM tpch.tiny.region
 ORDER BY name;
 ```
 
@@ -289,7 +294,7 @@ Access a value in the row behind and ahead of the current row:
 SELECT name,
        lag(name) OVER (ORDER BY name) AS lag,
        lead(name) OVER (ORDER BY name) AS lead
-FROM region
+FROM tpch.tiny.region
 ORDER BY name;
 ```
 
@@ -312,7 +317,7 @@ Access a value in the row behind and ahead of the current row, with default:
 SELECT name,
        lag(name, 1, 'none') OVER (ORDER BY name) AS lag,
        lead(name, 1, 'none') OVER (ORDER BY name) AS lead
-FROM region
+FROM tpch.tiny.region
 ORDER BY name;
 ```
 
@@ -335,7 +340,7 @@ Access a value two rows back and two rows ahead, with default:
 SELECT name,
        lag(name, 2, 'none') OVER (ORDER BY name) AS lag2,
        lead(name, 2, 'none') OVER (ORDER BY name) AS lead2
-FROM region
+FROM tpch.tiny.region
 ORDER BY name;
 ```
 
@@ -412,7 +417,7 @@ Examples:
 * `ROWS BETWEEN UNBOUNDED PRECEDING AND 5 FOLLOWING`
 * `ROWS BETWEEN 3 PRECEDING AND UNBOUNDED FOLLOWING`
 
-Source: https://www.sqlitetutorial.net/sqlite-window-functions/sqlite-window-frame/
+[Source](https://www.sqlitetutorial.net/sqlite-window-functions/sqlite-window-frame/)
 
 -vertical
 ## Accessing the first value
@@ -423,7 +428,7 @@ SELECT name,
            ORDER BY name
            ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
        ) AS value
-FROM region;
+FROM tpch.tiny.region;
 ```
 
 -notes
@@ -445,7 +450,7 @@ SELECT name,
            ORDER BY name
            ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
        ) AS value
-FROM region;
+FROM tpch.tiny.region;
 ```
 
 -notes
@@ -467,7 +472,7 @@ SELECT name,
            ORDER BY name
            ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
        ) AS value
-FROM region;
+FROM tpch.tiny.region;
 ```
 
 -notes
@@ -547,5 +552,115 @@ FROM (VALUES ('a', 1), ('a', 2), ('a', 3), ('b', 4), ('b', 5), ('b', 6)) AS t (p
 -vertical
 ## Pattern matching
 
-MATCH_RECOGNIZE
+![](images/doordash-stock.png) <!-- .element width="550vw" -->
 
+-vertical
+## MATCH_RECOGNIZE
+
+```java
+1. FROM and JOINs including MATCH_RECOGNIZE
+  2. WHERE
+  3. GROUP BY
+  4. HAVING
+  5. Window functions
+  6. SELECT
+  7. DISTINCT
+  8. ORDER BY
+  9. LIMIT
+```
+
+-vertical
+## MATCH_RECOGNIZE
+
+Approach `MATCH_RECOGNIZE` in four steps:
+
+1. Define partitioning and ordering rules <!--helps define the window where the pattern is examined-->
+1. Define patterns using regular expressions and variables <!--What pattern am I looking for and how-->
+1. Define measure and compute during match <!--What information am I looking to get out of that pattern and what calculations do I do-->
+1. Define the shape output <!--How much information do I want back-->
+
+-vertical
+
+## MATCH_RECOGNIZE
+1. Define partitions and ordering to identify the window over which your pattern will be evaluated
+
+```sql
+PARTITION BY custkey
+ORDER BY orderdate
+```
+
+-vertical
+## MATCH_RECOGNIZE
+
+2. Define the pattern events and the pattern of those events using regular expressions 
+
+```sql
+PATTERN (START DOWN+ UP+)
+DEFINE
+  DOWN AS totalprice < PREV(totalprice),
+  UP AS totalprice > PREV(totalprice)
+```
+
+This is the classic stock market "V" pattern. 
+* `START` matches all columns so we don't skip evaluating the border rows
+* `DOWN` matches the pattern where `totalprice` value goes lower from the previous row
+* `UP` matches the pattern where `totalprice` value goes higher from the previous row
+
+-vertical
+## MATCH_RECOGNIZE
+
+3. Define measures: source data points, pattern data points, and aggregates related to a pattern
+```sql
+MEASURES
+  START.totalprice AS start_price,
+  LAST(DOWN.totalprice) AS bottom_price,
+  LAST(UP.totalprice) AS final_price,
+  START.orderdate AS start_date,
+  LAST(UP.orderdate) AS final_date
+```
+
+-vertical
+## MATCH_RECOGNIZE
+
+4. Define output style and specify where the row pattern matching resumes
+
+```sql
+ONE ROW PER MATCH
+AFTER MATCH SKIP PAST LAST ROW
+```
+* `ONE ROW PER MATCH` indicates to summarize the results rather than `ALL ROWS PER MATCH`
+* `SKIP PAST LAST ROW` indicates where to start checking for matching patterns
+  * only used for overlapping patterns
+
+-vertical
+## MATCH_RECOGNIZE
+
+### All together now
+
+```sql
+SELECT
+  custkey,
+  start_price,
+  bottom_price,
+  final_price,
+  start_date,
+  bottom_date,
+  final_date
+FROM orders
+  MATCH_RECOGNIZE (
+    PARTITION BY custkey
+    ORDER BY orderdate
+    MEASURES
+      START.totalprice AS start_price,
+      LAST(DOWN.totalprice) AS bottom_price,
+      LAST(UP.totalprice) AS final_price,
+      START.orderdate AS start_date,
+      LAST(DOWN.orderdate) AS bottom_date,
+      LAST(UP.orderdate) AS final_date
+    ONE ROW PER MATCH
+    PATTERN (START DOWN+ UP+)
+    DEFINE
+      DOWN AS totalprice < PREV(totalprice),
+      UP AS totalprice > PREV(totalprice)
+  );
+```

@@ -102,8 +102,8 @@ FROM (
 
 SELECT json_array('Java', 'Python', 'Go');
 
-SELECT json_array('Java', 'Python', null, 'Go');                 
-                 
+SELECT json_array('Java', 'Python', null, 'Go');
+
 SELECT json_array('Java', 'Python', null, 'Go' NULL ON NULL);
 
 SELECT json_array('Java', 'Python', null, 'Go'
@@ -128,13 +128,13 @@ SELECT json_parse('[1, 3, 5, 9]'),
 
 SELECT json_format(JSON '[1, 2, 3]'),
   typeof(json_format(JSON '[1, 2, 3]'));
- 
+
 SELECT
   ARRAY[1, 2, 3],
   ARRAY['foo', 'bar', 'bazz'],
   MAP(ARRAY['foo', 'bar'], ARRAY[1, 2]),
   ROW(1, 2.0);
- 
+
 SELECT array_agg(name ORDER BY name DESC) names
 FROM tpch.tiny.region;
 
@@ -202,13 +202,6 @@ FROM (
 ) AS t (m)
 CROSS JOIN UNNEST(m) AS x (key, value);
 
-SELECT r.name AS region, n.name AS nation
-FROM tpch.tiny.nation AS n
-JOIN tpch.tiny.region AS r
-ON n.regionkey = r.regionkey
-WHERE r.regionkey = 2
-ORDER by region, nation;
-
 SELECT name
 FROM tpch.tiny.nation
 WHERE regionkey=1;
@@ -220,164 +213,49 @@ AND name<>'UNITED STATES';
 
 SELECT name
 FROM tpch.tiny.nation
-WHERE 
+WHERE
 regionkey=1 OR regionkey=2
 AND name<>'UNITED STATES'; -- error?!
 
-SELECT name, regionkey 
+SELECT name, regionkey
 FROM tpch.tiny.nation
 WHERE (regionkey=1 AND NOT name='UNITED STATES')
 OR regionkey=2;
 
-SELECT name, regionkey 
+SELECT name, regionkey
 FROM tpch.tiny.nation
 WHERE regionkey=1 AND NOT name='UNITED STATES'
 OR regionkey=2;
 
-SELECT name, regionkey 
+SELECT name, regionkey
 FROM tpch.tiny.nation
-WHERE regionkey=1 OR regionkey=2 
+WHERE regionkey=1 OR regionkey=2
 AND NOT name = 'UNITED STATES'; --error?!
 
-SELECT name, regionkey 
+SELECT name, regionkey
 FROM tpch.tiny.nation
-WHERE regionkey=2 OR regionkey=1 
+WHERE regionkey=2 OR regionkey=1
 AND NOT name = 'UNITED STATES';
 
-SELECT name, regionkey 
+SELECT name, regionkey
 FROM tpch.tiny.nation
 WHERE (regionkey=2 OR regionkey=1)
 AND NOT name = 'UNITED STATES';
 
-SELECT totalprice, custkey 
-FROM tpch.tiny.orders 
+SELECT totalprice, custkey
+FROM tpch.tiny.orders
 WHERE totalprice > 400000;
 
 SELECT totalprice, custkey
 FROM tpch.tiny.orders
 WHERE totalprice BETWEEN 420000 AND 450000;
 
-SELECT name FROM tpch.tiny.region 
+SELECT name FROM tpch.tiny.region
 WHERE name NOT IN ('ASIA', 'MIDDLE EAST');
 
 SELECT name
 FROM tpch.tiny.nation
 ORDER BY name DESC
 LIMIT 3;
-
-SELECT count(DISTINCT custkey) AS customers
-FROM tpch.tiny.orders;
-
-SELECT approx_distinct(custkey) AS customers
-FROM tpch.tiny.orders;
-
-SELECT round(avg(price)) AS avg,
-       approx_percentile(price, 0.5) AS pct
-FROM (
-  SELECT cast(round(totalprice) AS bigint) AS price
-  FROM tpch.tiny.orders
-);
-
-SELECT approx_percentile(price, array[0.1, 0.2, 0.5, 0.9, 0.99]) AS pct
-FROM (
-  SELECT cast(round(totalprice) AS bigint) AS price
-  FROM tpch.tiny.orders
-);
-
-SELECT r.name as region, n.name AS nation
-FROM tpch.tiny.nation AS n
-JOIN tpch.tiny.region AS r
-ON n.regionkey = r.regionkey;
-
-SELECT r.name as region, count(n.name) 
-FROM tpch.tiny.nation AS n
-JOIN tpch.tiny.region AS r
-ON n.regionkey = r.regionkey
-group by r.name;;
-
-SELECT r.name as region, n.name AS nation
-FROM tpch.tiny.nation AS n
-JOIN tpch.tiny.region AS r
-ON n.regionkey = r.regionkey
-where n.name like 'A%' or n.name like 'U%' 
-order by region, nation;
-
-SELECT r.name AS region, count(n.name)
-FROM tpch.tiny.nation AS n
-JOIN tpch.tiny.region AS r
-ON n.regionkey = r.regionkey
-where n.name like 'A%' or n.name like 'U%'
-group by r.name;
-
-SELECT max_by(clerk, totalprice) clerk,
-       max(totalprice) price
-FROM tpch.tiny.orders;
-
-SELECT max(cast(row(totalprice, clerk) AS
-           row(price double, clerk varchar))).*
-FROM tpch.tiny.orders;
-
-SELECT max_by(clerk, totalprice, 3) clerks
-FROM tpch.tiny.orders;
-
-SELECT
-  count_if(orderpriority = '1-URGENT') AS urgent,
-  count_if(orderpriority = '2-HIGH') AS high,
-  count_if(orderpriority = '3-MEDIUM') AS medium,
-  count_if(orderpriority = '4-NOT SPECIFIED') AS not_specified,
-  count_if(orderpriority = '5-LOW') AS low
-FROM tpch.tiny.orders;
-
-SELECT
-  count(*) FILTER (WHERE orderpriority = '1-URGENT') AS urgent,
-  count(*) FILTER (WHERE orderpriority = '2-HIGH') AS high,
-  count(*) FILTER (WHERE orderpriority = '3-MEDIUM') AS medium,
-  count(*) FILTER (WHERE orderpriority = '4-NOT SPECIFIED') AS not_specified,
-  count(*) FILTER (WHERE orderpriority = '5-LOW') AS low
-FROM tpch.tiny.orders;
-
-SELECT
-  avg(totalprice) FILTER (WHERE orderpriority = '1-URGENT') AS urgent,
-  avg(totalprice) FILTER (WHERE orderpriority = '2-HIGH') AS high,
-  avg(totalprice) FILTER (WHERE orderpriority = '3-MEDIUM') AS medium,
-  avg(totalprice) FILTER (WHERE orderpriority = '4-NOT SPECIFIED') AS not_specified,
-  avg(totalprice) FILTER (WHERE orderpriority = '5-LOW') AS low
-FROM tpch.tiny.orders;
-
-SELECT avg(totalprice *
-           CASE
-             WHEN orderpriority = '1-URGENT' THEN 1.10
-             WHEN orderpriority = '2-HIGH' THEN 1.05
-             ELSE 1.0
-           END) / avg(totalprice) AS premium
-FROM tpch.tiny.orders;
-
-SELECT orderpriority,
-       count(*) AS orders
-FROM tpch.tiny.orders
-GROUP BY ROLLUP(orderpriority)
-ORDER BY orderpriority;
-
-SELECT linestatus, returnflag,
-       count(*) AS items
-FROM tpch.tiny.lineitem
-GROUP BY ROLLUP(linestatus, returnflag)
-ORDER BY linestatus, returnflag;
-
-SELECT linestatus, returnflag,
-       count(*) AS items
-FROM tpch.tiny.lineitem
-GROUP BY CUBE(linestatus, returnflag)
-ORDER BY linestatus, returnflag;
-
-SELECT linestatus, returnflag,
-       count(*) AS items
-FROM tpch.tiny.lineitem
-GROUP BY GROUPING SETS (
-    (linestatus),
-    (returnflag),
-    (linestatus, returnflag),
-    ())
-ORDER BY linestatus, returnflag;
 
 
