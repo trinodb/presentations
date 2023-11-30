@@ -1,16 +1,18 @@
 -- Aggregation module
 
--- Don't use * for performance and correctness reasons
+-- Count how many rows there are in the table
 SELECT
   count(*) AS customers
 FROM tpch.tiny.customer;
 
+-- Count how many rows with a custkey value there (not null)
 SELECT
   count(custkey) AS customers
 FROM tpch.tiny.customer;
 --1500
 
 -- Use distinct and an identifier if you are not sure about data quality
+-- Count how many unique custkey values there are
 SELECT
   count(DISTINCT custkey) AS customers
 FROM tpch.tiny.customer;
@@ -169,6 +171,14 @@ GROUP BY GROUPING SETS (
     ())
 ORDER BY linestatus, returnflag;
 
+SELECT name,
+       reduce_agg(value, 1,
+                  (a, b) -> a * b,
+                  (a, b) -> a * b) AS product
+FROM (VALUES ('x', 1), ('x', 3), ('x', 5),
+             ('y', 2), ('y', 4), ('y', 6)) AS t (name, value)
+GROUP BY name;
+
 -- Table functions module
 
 SELECT * FROM
@@ -307,9 +317,9 @@ FUNCTION hrd(d integer)
         IF years > 1 THEN
             SET answer = answer || 's';
         END IF;
-        SET d = d - cast( years AS integer) * 365 ;
+        SET d = d - cast(years AS integer) * 365 ;
         SET months = truncate(d / 30);
-        IF months > 0 and years > 0 THEN
+        IF months > 0 AND years > 0 THEN
             SET answer = answer || ' and ';
        	END IF;
         IF months > 0 THEN
@@ -318,7 +328,7 @@ FUNCTION hrd(d integer)
         IF months > 1 THEN
             SET answer = answer || 's';
         END IF;
-        IF years < 1 and months < 1 THEN
+        IF years < 1 AND months < 1 THEN
         	SET answer = 'Less than 1 month.';
         END IF;
         RETURN answer;
@@ -339,9 +349,9 @@ CREATE FUNCTION hrd(d integer)
         IF years > 1 THEN
             SET answer = answer || 's';
         END IF;
-        SET d = d - cast( years AS integer) * 365 ;
+        SET d = d - cast(years AS integer) * 365 ;
         SET months = truncate(d / 30);
-        IF months > 0 and years > 0 THEN
+        IF months > 0 AND years > 0 THEN
             SET answer = answer || ' and ';
        	END IF;
         IF months > 0 THEN
@@ -350,7 +360,7 @@ CREATE FUNCTION hrd(d integer)
         IF months > 1 THEN
             SET answer = answer || 's';
         END IF;
-        IF years < 1 and months < 1 THEN
+        IF years < 1 AND months < 1 THEN
         	SET answer = 'Less than 1 month.';
         END IF;
         RETURN answer;

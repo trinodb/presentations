@@ -51,7 +51,7 @@ SELECT
 FROM tpch.tiny.orders;
 ```
 
-This example has an error of 1.66%, but is faster.
+This example has a statistical standard deviation of 1.66%, but is faster.
 
 -vertical
 ##  Approximate percentiles
