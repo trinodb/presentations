@@ -9,6 +9,7 @@ for any event and demo.
 * [SQL training 1: Getting started with Trino and SQL](https://trino.io/blog/2023/10/18/sql-training-1)
 * [SQL training 2: Advanced analytics with SQL and Trino](https://trino.io/blog/2023/11/01/sql-training-2)
 * [SQL training 3: Data management with SQL and Trino](https://trino.io/blog/2023/11/15/sql-training-3)
+* [SQL training 4: Functions with SQL and Trino](https://trino.io/blog/2023/11/29/sql-training-4)
 
 ## Presenting
 

@@ -191,13 +191,13 @@ CREATE FUNCTION hrd(d integer)
 ## Example testing
 
 ```sql
-SELECT hrd(10) -- Less than 1 month
-SELECT hrd(95) -- About 3 months
-SELECT hrd(400) -- About 1 year and 1 month
-SELECT hrd(369) -- About 1 year
-SELECT hrd(800) -- About 2 years and 2 months
-SELECT hrd(1100) -- About 3 years
-SELECT hrd(5000) -- About 13 years and 8 months
+SELECT hrd(10); -- Less than 1 month
+SELECT hrd(95); -- About 3 months
+SELECT hrd(400); -- About 1 year and 1 month
+SELECT hrd(369); -- About 1 year
+SELECT hrd(800); -- About 2 years and 2 months
+SELECT hrd(1100); -- About 3 years
+SELECT hrd(5000); -- About 13 years and 8 months
 ```
 
 * Next up - customize to exact message
