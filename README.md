@@ -11,6 +11,11 @@ for any event and demo.
 * [SQL training 3: Data management with SQL and Trino](https://trino.io/blog/2023/11/15/sql-training-3)
 * [SQL training 4: Functions with SQL and Trino](https://trino.io/blog/2023/11/29/sql-training-4)
 
+Other assets:
+
+* Background images for video calls and other usage in `assets/backgrounds`.
+* Logo files for Trino and related technologies in `assets/logos`.
+
 ## Presenting
 
 Use the [URL for the repository to display the overview
