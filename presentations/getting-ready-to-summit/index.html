@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Getting ready to summit</title>
+<link rel="stylesheet" href="../../reveal/dist/reset.css">
+<link rel="stylesheet" href="../../reveal/dist/reveal.css">
+<link rel="stylesheet" href="../../css/trino-theme.css" id="theme">
+<link rel="stylesheet" href="../../css/trino.css"/>
+<link rel="stylesheet" href="../../css/colors.css">
+<script src="../../reveal/plugin/highlight/highlight.js"></script>
+
+<script>
+  document.write('<link rel="stylesheet" href="../../reveal/css/print/'
+      + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper')
+      + '.css" type="text/css" media="print">');
+</script>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+    <section
+      class="title-slide">
+      <h1>Getting ready to summit</h1>
+      <h3 style="color:#f88600;">and reach new SQL skill heights</h3>
+      <br />
+      <br />
+      <p></p>
+      <small>Download the <a href="example-queries.sql">example queries</a></small>
+    </section>
+    <section data-markdown="1.md"
+      data-separator="-horizontal"
+      data-separator-vertical="-vertical"
+      data-separator-notes="-notes"
+      data-charset="iso-8859-15"
+      data-background="../../assets/logos/horizontal/svg/trino-logo-horizontal-white.svg"
+      data-background-size="250px"
+      data-background-position="bottom 10px left 10px"></section>
+  </div>
+</div>
+
+<script src="../../reveal/dist/reveal.js"></script>
+<script src="../../reveal/plugin/notes/notes.js"></script>
+<script src="../../reveal/plugin/markdown/markdown.js"></script>
+<script src="../../reveal/plugin/highlight/highlight.js"></script>
+<script src="../../reveal/plugin/appearance/appearance.js"></script>
+<script>
+ Reveal.initialize({
+   hash: true,
+   parallaxBackgroundImage: '../../assets/logos/space-background-faded.svg',
+   parallaxBackgroundSize: '2853px 1000px',
+   // Learn about plugins: https://revealjs.com/plugins/
+   plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, Appearance]
+ });
+</script>
+</body>
+</html>
