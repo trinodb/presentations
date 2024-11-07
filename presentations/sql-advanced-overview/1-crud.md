@@ -1,4 +1,4 @@
-# CRUD Statements
+# CRUD statements
 
 -vertical
 
@@ -80,7 +80,7 @@ AS
 
 ## Trino CTAS is special
 
-```
+```sql
 CREATE TABLE datalake.default.pokemon 
 WITH (
   format = 'Parquet',
@@ -159,7 +159,7 @@ ON (i.orderkey = t.orderkey)
 
 ## MERGE
 
-Lets recover those deleted columns and remove by different criteria
+Let's recover those deleted columns and remove by different criteria
 
 ```sql
 MERGE INTO datalake.tiny.orders i
