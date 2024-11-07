@@ -5,12 +5,17 @@
 -vertical
 ## What is a view?
 
-* A SQL `SELECT`` query
+* A SQL `SELECT` query
 * With a name
 * Exposes result columns from query like a table
 * Encapsulates complexities of queries
 * Makes it easier for users
 * Runs the query each time the view is accessed
+
+-notes
+* statically bound to the schema of the input tables
+* for example, `SELECT * FROM table` in view gets invalidated by table changes
+  like an added column
 
 -vertical
 ## Types of views
